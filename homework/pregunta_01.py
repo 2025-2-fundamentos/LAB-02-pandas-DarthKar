@@ -5,7 +5,7 @@ datos requeridos se encuentran en los archivos `tbl0.tsv`, `tbl1.tsv` y
 librerias de pandas para resolver las preguntas.
 """
 
-
+import pandas as pd
 def pregunta_01():
     """
     ¿Cuál es la cantidad de filas en la tabla `tbl0.tsv`?
@@ -14,3 +14,6 @@ def pregunta_01():
     40
 
     """
+    dt = pd.read_csv(r'files/input/tbl0.tsv')
+    
+    return len(dt.index)
